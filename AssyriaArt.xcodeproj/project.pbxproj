@@ -14,6 +14,13 @@
 		B87E414E2B81606D0085665E /* AssyriaArtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E414D2B81606D0085665E /* AssyriaArtTests.swift */; };
 		B87E41582B81606D0085665E /* AssyriaArtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41572B81606D0085665E /* AssyriaArtUITests.swift */; };
 		B87E415A2B81606D0085665E /* AssyriaArtUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41592B81606D0085665E /* AssyriaArtUITestsLaunchTests.swift */; };
+		B87E41672B8162910085665E /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41662B8162900085665E /* DrawingView.swift */; };
+		B87E41692B8162D90085665E /* NewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41682B8162D90085665E /* NewTabView.swift */; };
+		B87E416B2B8162F40085665E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E416A2B8162F40085665E /* RootView.swift */; };
+		B87E416D2B8163110085665E /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E416C2B8163110085665E /* ImageSaver.swift */; };
+		B87E416F2B8163380085665E /* DrawingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E416E2B8163380085665E /* DrawingShape.swift */; };
+		B87E41712B81634D0085665E /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41702B81634D0085665E /* Line.swift */; };
+		B87E41732B8163650085665E /* DrawingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E41722B8163650085665E /* DrawingEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		B87E41532B81606D0085665E /* AssyriaArtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssyriaArtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87E41572B81606D0085665E /* AssyriaArtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssyriaArtUITests.swift; sourceTree = "<group>"; };
 		B87E41592B81606D0085665E /* AssyriaArtUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssyriaArtUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B87E41662B8162900085665E /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		B87E41682B8162D90085665E /* NewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabView.swift; sourceTree = "<group>"; };
+		B87E416A2B8162F40085665E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B87E416C2B8163110085665E /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		B87E416E2B8163380085665E /* DrawingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingShape.swift; sourceTree = "<group>"; };
+		B87E41702B81634D0085665E /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		B87E41722B8163650085665E /* DrawingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,13 @@
 			children = (
 				B87E413C2B81606B0085665E /* AssyriaArtApp.swift */,
 				B87E413E2B81606B0085665E /* ContentView.swift */,
+				B87E41662B8162900085665E /* DrawingView.swift */,
+				B87E41682B8162D90085665E /* NewTabView.swift */,
+				B87E416A2B8162F40085665E /* RootView.swift */,
+				B87E416C2B8163110085665E /* ImageSaver.swift */,
+				B87E416E2B8163380085665E /* DrawingShape.swift */,
+				B87E41702B81634D0085665E /* Line.swift */,
+				B87E41722B8163650085665E /* DrawingEngine.swift */,
 				B87E41402B81606D0085665E /* Assets.xcassets */,
 				B87E41422B81606D0085665E /* Preview Content */,
 			);
@@ -257,8 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87E416F2B8163380085665E /* DrawingShape.swift in Sources */,
+				B87E41672B8162910085665E /* DrawingView.swift in Sources */,
+				B87E416D2B8163110085665E /* ImageSaver.swift in Sources */,
 				B87E413F2B81606B0085665E /* ContentView.swift in Sources */,
 				B87E413D2B81606B0085665E /* AssyriaArtApp.swift in Sources */,
+				B87E41712B81634D0085665E /* Line.swift in Sources */,
+				B87E41692B8162D90085665E /* NewTabView.swift in Sources */,
+				B87E416B2B8162F40085665E /* RootView.swift in Sources */,
+				B87E41732B8163650085665E /* DrawingEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +453,12 @@
 				DEVELOPMENT_TEAM = DBW68CUCY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your finished artwork";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +483,12 @@
 				DEVELOPMENT_TEAM = DBW68CUCY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your finished artwork";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
