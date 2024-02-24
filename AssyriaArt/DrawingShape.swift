@@ -3,7 +3,7 @@
 //  AssyriaArt
 //
 //  Created by Kayla Dizayer on 2/17/24.
-//
+// Cite: Karin Prater
 
 import Foundation
 import SwiftUI

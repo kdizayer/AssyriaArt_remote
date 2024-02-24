@@ -17,10 +17,12 @@ struct RootView: View {
             Scribeintro() // Scribe welcome page linked
         } else {
             ZStack {
-                Image("doodle")
+               // Color("white")
+                Image("doodles")
                     .resizable()
                     .scaledToFit()
-                    
+                    .frame(width: 800, height: 900)
+                    .offset(x: 110, y: 0)
                 Image("icon")
                     .resizable()
                     .scaledToFit()
@@ -34,11 +36,11 @@ struct RootView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .offset(x: 0, y: -250)
                 VStack(spacing: 20) {
-                                    // Add your welcoming text here
+                                    
                                     Text("Welcome to Assyria Art!")
                                         .font(.title)
-                                        .foregroundColor(.blue) // Adjust the color to fit your design
-                                        .offset(y: showTabView ? 0 : UIScreen.main.bounds.height)
+                                        .bold()
+                                        .foregroundColor(.black)
                                     
                                     // "Get Started" button
                                     Button("Get Started") {
@@ -49,13 +51,11 @@ struct RootView: View {
                                     .padding()
                                     .background(Color.blue)
                                     .foregroundColor(.white)
-                                    .clipShape(Capsule()) // Using Capsule shape for a more standard button appearance
-                                    // Removed the exaggerated frame size, padding will define the button size
-                                    .offset(x: 0, y: 60) // Adjust the offset as needed
-                                    .offset(y: showTabView ? 0 : UIScreen.main.bounds.height)
+                                    .clipShape(Capsule())
+                                    .offset(x: 0, y: 60)
                                 }
                             }
-                            .edgesIgnoringSafeArea(.all) // Optional: Make the background extend to the edges
+                            .edgesIgnoringSafeArea(.all)
                         }
                     }
                 }

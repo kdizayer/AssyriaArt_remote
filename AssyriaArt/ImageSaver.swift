@@ -3,7 +3,7 @@
 //  AssyriaArt
 //
 //  Created by Kayla Dizayer on 2/17/24.
-//
+// Cite: HackingWithSwift
 
 import Foundation
 import UIKit

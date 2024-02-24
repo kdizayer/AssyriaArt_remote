@@ -3,7 +3,7 @@
 //  AssyriaArt
 //
 //  Created by Kayla Dizayer on 2/17/24.
-//
+//  Cite: Karin Prater
 
 import Foundation
 import SwiftUI
@@ -17,6 +17,9 @@ struct DrawingView: View {
     @State private var selectedLineWidth: CGFloat = 1
     @State private var inputImage: UIImage?
     
+    @State private var showingSaveSuccessAlert = false
+    @State private var showingSaveErrorAlert = false
+    @State private var saveErrorMessage = ""
     let engine = DrawingEngine()
     @State private var showConfirmation: Bool = false
     
@@ -65,21 +68,39 @@ struct DrawingView: View {
                     }
                 
             
-                Button("Save") {
+/*Button("Save") {
                         guard let drawingImage = renderDrawingAsImage() else { return }
                         let imageSaver = ImageSaver()
                         imageSaver.successHandler = {
                             print("Image successfully saved.")
+                            self.showingSaveSuccessAlert = true
                         }
                         imageSaver.errorHandler = { error in
                             print("Error saving image: \(error.localizedDescription)")
+                            imageSaver.errorHandler = { error in
+                                   self.saveErrorMessage = error.localizedDescription
+                                   self.showingSaveErrorAlert = true
                         }
                         imageSaver.writeToPhotoAlbum(image: drawingImage)
                     }
-                
+                        .alert("Saved Successfully", isPresented: $showingSaveSuccessAlert) {
+                            Button("OK", role: .cancel) { }
 
             }.padding()
-            
+            */
+                Button("Save") {
+                                    guard let drawingImage = renderDrawingAsImage() else { return }
+                                    let imageSaver = ImageSaver()
+                                    imageSaver.successHandler = {
+                                        self.showingSaveSuccessAlert = true // Show success alert on successful save
+                                    }
+                                    imageSaver.errorHandler = { error in
+                                        self.saveErrorMessage = error.localizedDescription
+                                        self.showingSaveErrorAlert = true // Show error alert on save failure
+                                    }
+                                    imageSaver.writeToPhotoAlbum(image: drawingImage)
+                                }
+                            }.padding()
             
             ZStack {
                 
@@ -115,6 +136,15 @@ struct DrawingView: View {
         )
             
         }
+    
+            .alert("Saved Successfully", isPresented: $showingSaveSuccessAlert) {
+                Button("OK", role: .cancel) { }
+            }
+            .alert("Save Error", isPresented: $showingSaveErrorAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(saveErrorMessage)
+            }
     }
     func renderDrawingAsImage() -> UIImage? {
         let size = CGSize(width: 700, height: 700) // Adjust size
